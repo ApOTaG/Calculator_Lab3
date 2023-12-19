@@ -35,6 +35,11 @@ public void onButtonClick(View view) {
                 double number = Double.parseDouble(currentInput);
                 currentInput = String.valueOf(-number);
             }
+        } else if(buttonText.equals("Back")){
+            if (!currentInput.isEmpty()){
+                currentInput = currentInput.substring(0, currentInput.length() - 1);
+            }
+
         } else if (isOperator(buttonText)) {
             if (!currentInput.isEmpty()) {
 
